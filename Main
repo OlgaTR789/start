@@ -1,0 +1,23 @@
+package org.example;
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        var scanner = new Scanner(System.in);
+
+        System.out.println("Вкажіть кількість пального в літрах яке витрачає авто на 100 км: ");
+        var fuel = scanner.nextDouble();
+
+        while (true) {
+            System.out.println("Вкажіть відстань, що проїхало авто в км:");
+            var distance = scanner.nextDouble();
+
+            if (distance == 0)
+                break;
+
+            var result = fuel * (distance / 100);
+            System.out.println("ВІтрата пального = " + result);
+        }
+    }
+}
